@@ -27,6 +27,7 @@ int cariDataByNIM(const string& nim) {
     }
     return -1; // Data tidak ditemukan
 }
+
 void tampilkanMenu(){
 system("cls");
 cout << "\n=== Menu Aplikasi Data Mahasiswa ===\n";
@@ -36,7 +37,6 @@ cout << "3. Update Data Mahasiswa\n";
 cout << "4. Hapus Data Mahasiswa\n";
 cout << "5. Exit\n";
 cout << "Masukkan pilihan: ";       
-
 }
 
 void tambahData() {
@@ -60,6 +60,29 @@ void tambahData() {
     cin >> dataMahasiswa[pos].ipk;
 }
 
+void tampilkanData() {
+    system("cls");  // Clear screen sebelum menampilkan data
+    if (pos == -1) {
+        cout << "\nTidak ada data mahasiswa.\n";
+        return;
+    }
+
+    cout << "\n=== Data Mahasiswa ===\n";
+    cout << left << setw(15) << "NIM" 
+        << setw(30) << "Nama"
+        << setw(30) << "Alamat"
+        << setw(15) << "Tgl Lahir"
+        << setw(5)  << "IPK" << endl;
+    cout << string(100, '-') << endl;
+
+    for (int i = 0; i <= pos; i++) {
+        cout << left << setw(15) << dataMahasiswa[i].nim
+            << setw(30) << dataMahasiswa[i].nama
+            << setw(30) << dataMahasiswa[i].alamat
+            << setw(15) << dataMahasiswa[i].tanggalLahir
+            << setw(5)  << dataMahasiswa[i].ipk << endl;
+    }
+}
 
 
 int main() {
@@ -74,6 +97,7 @@ do
     tambahData();
     break;
    case '2':
+    tampilkanData();
     break;  
    case '3':
     break;  
