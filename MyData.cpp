@@ -5,13 +5,13 @@ using namespace std;
 
 void dMenu(){
 system("cls");
-cout<<"Aplikasi Tampilan Menu"<<"\n";       
-cout<<"1. Masukkan Data"<<"\n";            
-cout<<"2. Menu Kedua"<<"\n";            
-cout<<"3. Menu Ketiga"<<"\n";           
-cout<<"4. Menu Keempat"<<"\n";            
-cout<<"5. Exit"<<"\n";           
-cout<<"Masukan angka :";        
+cout << "\n=== Menu Aplikasi Data Mahasiswa ===\n";
+cout << "1. Masukkan Data Mahasiswa\n";
+cout << "2. Tampilkan Data Mahasiswa\n";
+cout << "3. Update Data Mahasiswa\n";
+cout << "4. Hapus Data Mahasiswa\n";
+cout << "5. Exit\n";
+cout << "Masukkan pilihan: ";       
 
 }
 
